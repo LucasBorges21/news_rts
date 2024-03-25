@@ -1,0 +1,180 @@
+* {
+    margin: 0;
+    padding: 0;
+    
+  }
+  
+body {
+     
+    font-family: sans-serif;
+    color: #333;
+    max-width: 600px;
+    margin: auto;
+    background-image:url(textura\ fundo.jpg)
+  
+}
+    
+header {
+    width: 100%;
+    text-align: center;
+    font-size: 16px;
+    margin-bottom: 10px;
+}
+
+h1 {
+    text-align: center;
+    color: white;
+    margin-bottom: 30px;
+}
+
+main {
+    display: flex;
+    flex-direction: row;
+    height: 600px;
+    background-color: white;
+    padding: 0;
+    margin: 0;
+    border-radius: 25px;
+
+}
+
+.container {
+    width: 600px;
+    height: 60%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    flex: 1 1 auto;
+}
+    
+
+#tx-nome {
+    width: 30vw;
+    min-width: 300px;
+    height: 40px;
+    margin-bottom: 10px;
+    border-radius: 15px;
+    background-color: #EBEBEB
+}
+
+#tx-empresa {
+    width: 30vw;
+    min-width: 300px;
+    height: 40px;
+    margin-bottom: 10px;
+    border-radius: 15px;
+    background-color: #EBEBEB
+    
+
+}
+
+#tx-cargo {
+    width: 30vw;
+    min-width: 300px;
+    height: 40px;
+    margin-bottom: 10px;
+    border-radius: 15px;
+    background-color: #EBEBEB
+
+}
+
+#tx-email {
+    width: 30vw;
+    min-width: 300px;
+    height: 40px;
+    margin-bottom: 10px;
+    border-radius: 15px;    
+    background-color: #EBEBEB
+
+}
+
+#tx-telefone {
+    width: 30vw;
+    min-width: 300px;
+    height: 40px;
+    margin-bottom: 10px;
+    border-radius: 15px;
+    background-color: #EBEBEB
+
+}
+
+#botao {
+    width: 30vw;
+    min-width: 300px;
+    height: 60px;
+    font-size: 20px;
+    border-radius: 15px;
+    background-color: #EBEBEB
+
+}
+
+#botao:active {
+    background-color: #A0A0A0;
+    transform: scale(1.1); /* Aumenta o tamanho em 10% quando clicado */
+}
+
+#botao:hover {
+    background-color: #050A30;
+    color: white;
+}
+
+.texto-acima {
+    font-size: 20px;
+    text-align: center;
+    width: 600px;
+    height: 20%;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    position: relative;
+    top: 20px;
+
+}
+
+.texto-abaixo {
+    font-size: 10px;
+    width: 600px;
+    height: 20%;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    text-align: center;
+    justify-content: center;
+    position: relative;
+    bottom: 40px;
+
+}
+
+@media only screen and (max-width: 600px) {
+    main {
+        flex-direction: column; /* Altera para coluna em telas menores que 600px */
+        height: auto; /* Ajusta a altura automaticamente */
+    }
+
+    .container {
+        width: 90%; 
+        margin: 10px auto; 
+    }
+
+    input,
+    #botao {
+        width: 90%; 
+        margin-bottom: 10px; 
+    }
+
+    .texto-acima {
+        width: 90%;
+        margin-bottom: 30px;
+        font-size: 15px;
+    }
+    
+    h1 {
+        font-size: 25px;
+    }
+    
+    .texto-abaixo {
+        width: 90%; 
+        margin-top: 60px;
+    }
+}

@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="UTF-8">
+        <link rel="stylesheet" href="mala_direta_forms.css">
+        <title>Formulário de Contato</title>
+        <link rel="icon" href="logo central.png">
+     </head>
+
+
+    <body>
+        <header>
+            <nav>
+                <a href="index.html">Início</a></li><a href="forms.html">Contato</a>   
+            </nav>  
+        </header>
+
+        <h1>Acesse a programação completa</h1>
+            <main>
+
+                <form method="post" id="formulario" onsubmit="mostrarMensagem()">
+
+                    <div class="texto-acima">
+                        <p><b>Preencha o formulário abaixo para receber informações detalhadas sobre o programa no seu email.</b></p>
+                    </div>
+
+                    <div class="container">
+
+                        <div>
+                            <label class="form-nome" for="tx-nome"></label>
+                            <input type="text" name="usuario" placeholder="Nome" id="tx-nome" maxlength="100" required> 
+                        </div>
+                        
+                        <div>
+                            <label class="form-empresa" for="tx-empresa"></label>
+                            <input type="text" name="empresa" placeholder="Empresa" id="tx-empresa" maxlength="100" required>
+                        </div>
+
+                        <div>
+                            <label class="form-cargo" for="tx-cargo"></label>
+                            <input type="text" name="cargo" placeholder="Cargo" id="tx-cargo" maxlength="50" required>
+                        </div>
+
+                        <div>
+                            <label class="form-email" for="tx-email"></label>
+                            <input type="email" name="email" placeholder="Email Corporativo" id="tx-email" maxlength="50" required>
+                        </div>
+
+                        <div>
+                            <label class="form-telefone" for="tx-telefone"></label>
+                            <input type="tel" name="telefone" placeholder="(DDD) Celular" id="tx-telefone" maxlength="16" required>
+                        </div>
+
+                        <div>
+                            <button type="submit" id="botao">ACESSE O PROGRAMA</button>
+                        </div>
+
+                    </div>
+
+                    <div class="texto-abaixo">
+                        <p><b>Ao submeter o formulário, você concorda com nossos termos de uso e políticas de privacidade</b></p>
+                    </div>
+
+                </form>
+
+            </main>
+            
+            <script>
+                function formatarTelefone() {
+                    var telefone = document.getElementById("tx-telefone").value;
+        
+                    var numeroLimpo = telefone.replace(/\D/g, '');
+        
+                    var numeroFormatado = "(" + numeroLimpo.substring(0, 2) + ") " + numeroLimpo.substring(2, 7) + "-" + numeroLimpo.substring(7);
+        
+                    document.getElementById("tx-telefone").value = numeroFormatado;
+                }
+        
+                document.getElementById("tx-telefone").addEventListener("input", formatarTelefone);
+
+                function mostrarMensagem() {
+                    window.location.href = "https://docs.google.com/document/d/e/2PACX-1vRm9SroxOhu_JJUZ295vl4ayGpDapRgKbtlEpR-Ou6_QS7UBYEH1VHrR-Ee52B3YnDcWit_FejtM15m/pub";
+                }
+            </script>
+
+    </body>
+</html>
